@@ -1,7 +1,6 @@
 import { Buffer } from "node:buffer";
 import * as fs from "node:fs";
 import * as http from "node:http";
-import { parse } from "node:path";
 
 const server = http.createServer((req, res) => {
 	const url = req.url;
@@ -35,13 +34,12 @@ const server = http.createServer((req, res) => {
 			const parsedBody = Buffer.concat(body).toString();
 			console.log(parsedBody);
 
-			fs.writeFileSync("message.txt", parsedBody);
+			fs.writeFile("message.txt", parsedBody, (err) => {
+				res.statusCode = 302;
+				res.setHeader("Location", "/");
+				return res.end();
+			});
 		});
-
-		
-		res.statusCode = 302;
-		res.setHeader("Location", "/");
-		return res.end();
 	}
 
 	res.setHeader("Content-Type", "text/html");
