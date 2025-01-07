@@ -3,9 +3,13 @@
 	"version": "1.0.0",
 	"description": "Node JS walkthrough",
 	"main": "app.ts",
+	"type": "module",
 	"scripts": {
-		"start": "deno run -A app.ts"
+		"start": "deno run -A --watch app.ts"
 	},
 	"author": "",
-	"license": "ISC"
+	"license": "ISC",
+	"devDependencies": {
+		"tsx": "^4.19.2"
+	}
 }
