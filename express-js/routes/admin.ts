@@ -1,6 +1,8 @@
 import { Router } from "express";
+import path from "node:path";
 
 const router = Router();
+const __dirname = path.dirname(new URL(import.meta.url).pathname).slice(1);
 
 router.post("/add-product", (req, res, next) => {
 	console.log(req.body);
@@ -9,9 +11,7 @@ router.post("/add-product", (req, res, next) => {
 });
 
 router.get("/add-product", (req, res, next) => {
-	res.send(
-		"<form action='/admin/add-product' method='POST'><input type='text' name='message'/><button type='submit'>Send Post Request</button></form>"
-	);
+	res.sendFile(path.join(__dirname, "../", "views", "add-product.html"));
 });
 
 export default router;
