@@ -1,13 +1,13 @@
 import bodyParser from "body-parser";
 import express from "express";
 import adminRouter from "./routes/admin.ts";
-import homeRouter from "./routes/home.ts";
+import shopRouter from "./routes/shop.ts";
 
 const app = express();
 
 app.use(bodyParser.urlencoded());
 app.use("/admin", adminRouter);
-app.use(homeRouter);
+app.use(shopRouter);
 
 app.use((req, res, next) => {
 	res.status(404);
