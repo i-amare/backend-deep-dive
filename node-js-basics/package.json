@@ -1,0 +1,11 @@
+{
+	"name": "node-js-basics",
+	"version": "1.0.0",
+	"description": "Node JS walkthrough",
+	"main": "app.ts",
+	"scripts": {
+		"start": "deno run -A app.ts"
+	},
+	"author": "",
+	"license": "ISC"
+}
