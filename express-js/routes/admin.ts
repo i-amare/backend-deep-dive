@@ -1,8 +1,8 @@
 import { Router } from "express";
 import path from "node:path";
+import { rootDir } from "../utils/path.ts";
 
 const router = Router();
-const __dirname = path.dirname(new URL(import.meta.url).pathname).slice(1);
 
 router.post("/add-product", (req, res, next) => {
 	console.log(req.body);
@@ -11,7 +11,7 @@ router.post("/add-product", (req, res, next) => {
 });
 
 router.get("/add-product", (req, res, next) => {
-	res.sendFile(path.join(__dirname, "../", "views", "add-product.html"));
+	res.sendFile(path.join(rootDir, "..", "views", "add-product.html"));
 });
 
 export default router;
