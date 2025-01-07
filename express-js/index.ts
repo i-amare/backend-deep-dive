@@ -1,5 +1,3 @@
-import * as http from "node:http";
-
 import express from "express";
 
 const app = express();
@@ -10,9 +8,7 @@ app.use((req, res, next) => {
 
 app.use((req, res, next) => {
 	console.log("Second middleware");
-	res.end();
+	res.send("<h1>Hello from Express!</h1>");
 });
 
-const server = http.createServer(app);
-
-server.listen(3000);
+app.listen(3000);
