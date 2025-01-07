@@ -32,7 +32,7 @@ const requestHandler = (
 			body.push(chunk);
 		});
 
-		req.on("end", () => {
+		return req.on("end", () => {
 			console.log("end triggered");
 			const parsedBody = Buffer.concat(body).toString();
 			console.log(parsedBody);
