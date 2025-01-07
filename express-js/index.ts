@@ -6,7 +6,7 @@ import homeRouter from "./routes/home.ts";
 const app = express();
 
 app.use(bodyParser.urlencoded());
-app.use(adminRouter);
+app.use("/admin", adminRouter);
 app.use(homeRouter);
 
 app.use((req, res, next) => {
