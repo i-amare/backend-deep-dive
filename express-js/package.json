@@ -1,0 +1,15 @@
+{
+	"name": "express-js",
+	"version": "1.0.0",
+	"description": "A deep dive into express.js and its functionality",
+	"main": "index.ts",
+	"scripts": {
+		"start": "deno run -A --watch index.ts",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.21.2"
+	}
+}
