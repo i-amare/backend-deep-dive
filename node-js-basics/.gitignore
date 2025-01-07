@@ -1,2 +1,5 @@
 # Ignore text output file
 *.txt
+
+#Ignore node modules
+node_modules
