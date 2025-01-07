@@ -9,4 +9,9 @@ app.use(bodyParser.urlencoded());
 app.use(adminRouter);
 app.use(homeRouter);
 
+app.use((req, res, next) => {
+	res.status(404);
+	res.send("<h1>Error 404: Page not found :(</h1>");
+});
+
 app.listen(3000);
