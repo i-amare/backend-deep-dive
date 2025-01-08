@@ -1,0 +1,20 @@
+{
+	"name": "pug-js",
+	"version": "1.0.0",
+	"description": "A quick overview of how pug-js works",
+	"main": "index.ts",
+	"scripts": {
+		"start": "deno run -A --watch index.ts",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.20.3",
+		"express": "^4.21.2",
+		"pug": "^3.0.3"
+	},
+	"devDependencies": {
+		"@types/express": "^5.0.0"
+	}
+}
