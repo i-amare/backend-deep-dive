@@ -1,0 +1,20 @@
+{
+	"name": "handlebars",
+	"version": "1.0.0",
+	"description": "A quick overview of how handlebars works",
+	"main": "index.ts",
+	"scripts": {
+		"start": "deno run -A --watch index.ts",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.20.3",
+		"express": "^4.21.2",
+		"express-handlebars": "^8.0.1"
+	},
+	"devDependencies": {
+		"@types/express": "^5.0.0"
+	}
+}
