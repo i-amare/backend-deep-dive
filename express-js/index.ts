@@ -8,6 +8,7 @@ const app = express();
 const __dirname = path.dirname(new URL(import.meta.url).pathname).slice(1);
 
 app.use(bodyParser.urlencoded());
+app.use(express.static(path.join(__dirname, "public")));
 app.use("/admin", adminRouter);
 app.use(shopRouter);
 
